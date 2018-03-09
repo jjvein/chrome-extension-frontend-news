@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function()
 			var temp = document.createElement('style');
 			temp.id = 'my_custom_css';
 			(document.head || document.body).appendChild(temp);
-			var css = `
+			var css = "
 			/* 移除百度右侧广告 */
 			#content_right{display:none;}
 			/* 覆盖整个屏幕的相关推荐 */
 			.rrecom-btn-parent{display:none;}'
 			/* 难看的按钮 */
-			.result-op.xpath-log{display:none !important;}`;
+			.result-op.xpath-log{display:none !important;}";
 			temp.innerHTML = css;
 			console.log('已注入自定义CSS！');
 			// 屏蔽百度推广信息
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function()
 		{
 			$('[data-tuiguang]').parents('[data-click]').remove();
 		}
-		fuckBaiduAD();
-		initCustomPanel();
+		// fuckBaiduAD();
+		// initCustomPanel();
 		initCustomEventListen();
 	}
 });

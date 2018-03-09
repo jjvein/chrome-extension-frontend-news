@@ -16,6 +16,26 @@ $('#open_background').click(e => {
 	// window.open(chrome.extension.getURL('background.html'));
 });
 
+$('#open_extensions').click(e=> {
+	chrome.tabs.create({ url: 'chrome://extensions/' });
+});
+
+$('#open_apps').click(() => {
+	chrome.tabs.create({ url: 'chrome://apps/' });
+});
+
+$('#open_version').click(() => {
+	chrome.tabs.create({ url: 'chrome://version/' });
+});
+
+$('#open_net').click(() => {
+	chrome.tabs.create({ url: 'chrome://net-internals/#events' });
+});
+
+$('#open_setting').click(() => {
+	chrome.tabs.create({ url: 'chrome://settings/' });
+});
+
 // 调用后台JS
 $('#invoke_background_js').click(e => {
 	var bg = chrome.extension.getBackgroundPage();
