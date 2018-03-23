@@ -32,8 +32,12 @@ $('#open_net').click(() => {
 	chrome.tabs.create({ url: 'chrome://net-internals/#events' });
 });
 
-$('#open_setting').click(() => {
+$('#open_settings').click(() => {
 	chrome.tabs.create({ url: 'chrome://settings/' });
+});
+
+$('#open_flags').click(() => {
+	chrome.tabs.create({ url: 'chrome://flags/' });
 });
 
 // 调用后台JS
