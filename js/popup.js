@@ -40,6 +40,10 @@ $('#open_flags').click(() => {
 	chrome.tabs.create({ url: 'chrome://flags/' });
 });
 
+$('#open_inspect').click(() => {
+	chrome.tabs.create({ url: 'chrome://inspect' });
+});
+
 // 调用后台JS
 $('#invoke_background_js').click(e => {
 	var bg = chrome.extension.getBackgroundPage();
